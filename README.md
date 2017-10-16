@@ -42,4 +42,4 @@ npm run build --report
 
 After running **npm run build** step a /dist folder will be created. This should be the root for running a local server, one such server to use is:
 
-**npm install http-server** then cd to the /dist folder and just type **http-server**, view the site at **localhost:8080/**
+**npm install -g http-server** then cd to the /dist folder and just type **http-server**, view the site at **localhost:8080/**
