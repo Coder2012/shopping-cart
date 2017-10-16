@@ -1,6 +1,6 @@
 # shopping-cart
 
-> Built with Vue.js
+> Built with Vue.js using vue-cli and webpack
 
 ## summary
 
