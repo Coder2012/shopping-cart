@@ -38,7 +38,7 @@
     data () {
       return {
         voucherValid: undefined,
-        voucherErrorMsg: 'Invalid voucher code',
+        voucherErrorMsg: 'Invalid voucher code / not qualified',
         voucherSuccessMsg: 'Voucher code accepted',
         voucher: '',
         voucherDiscount: 0
@@ -69,8 +69,12 @@
         console.log(voucher)
         if (voucher.length) {
           this.voucherValid = true
-          if (voucher[0].hasOwnProperty('min') && this.total >= voucher[0].min) {
-            this.voucherDiscount = voucher[0].value
+          if (voucher[0].hasOwnProperty('min')) {
+            if (this.total >= voucher[0].min) {
+              this.voucherDiscount = voucher[0].value
+            } else {
+              this.voucherValid = false
+            }
           } else {
             this.voucherDiscount = voucher[0].value
           }
