@@ -22,6 +22,9 @@ Voucher codes can be added as follows:
 ## Build Setup
 
 ``` bash
+# clone the repository
+git clone https://github.com/Coder2012/shopping-cart.git
+
 # install dependencies
 npm install
 
